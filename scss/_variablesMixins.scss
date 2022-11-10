@@ -1,0 +1,11 @@
+$fondoAzul: #0207f2;
+$letras: rgb(8, 2, 2);
+$letrasBoton:  #fff;
+$fondoBoton: #24cf88;
+
+@mixin cards (){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
