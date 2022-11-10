@@ -1,0 +1,304 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+a, a:active {
+  text-decoration: none;
+  color: #080202; }
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: #080202; }
+
+h1, h2, h3 {
+  margin: auto;
+  padding: 1rem;
+  font-size: 2.5rem; }
+
+h3 {
+  font-size: 1.7rem; }
+
+h4 {
+  font-size: 1.4rem; }
+
+p {
+  padding: 1rem; }
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 5fr 1fr;
+  grid-template-areas: "header header header" "section1 section2 section3" "footer footer footer"; }
+  .container .header {
+    grid-area: header; }
+  .container .main {
+    grid-column: section1 / section3; }
+  .container .us-main {
+    grid-column: section1 / section2; }
+  .container .us-img {
+    grid-column: section3; }
+  .container .serv-main {
+    grid-column: section1 / section3; }
+  .container .footer {
+    grid-area: footer; }
+
+@media screen and (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "header" "section1" "section2" "section3" "footer"; }
+    .container .header {
+      grid-area: header;
+      display: flex;
+      flex-direction: column; }
+    .container .index-main {
+      grid-column: section1 / section3;
+      padding: 100px; }
+    .container .us-df-main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; }
+      .container .us-df-main .us-main {
+        grid-column: section1 / section2; }
+      .container .us-df-main .us-card {
+        width: 90%;
+        padding: 20px;
+        margin: 20px; }
+    .container .us-img {
+      grid-column: section3; }
+      .container .us-img .w-img2 {
+        width: 70%; }
+    .container .serv-main {
+      grid-column: section1 / section3; }
+      .container .serv-main .df-main {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column; }
+    .container .footer {
+      grid-area: footer;
+      display: flex;
+      flex-direction: column; } }
+
+@media screen and (max-width: 576px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "header" "section1" "section2" "section3" "footer"; }
+    .container .header {
+      grid-area: header;
+      display: flex;
+      flex-direction: column; }
+      .container .header nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; }
+    .container .index-main {
+      grid-column: section1 / section3;
+      padding: 60px; }
+    .container .us-df-main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; }
+      .container .us-df-main .us-main {
+        grid-column: section1 / section2; }
+      .container .us-df-main .us-card {
+        width: 80%;
+        padding: 20px;
+        margin: 20px; }
+      .container .us-df-main .us-img {
+        grid-column: section3;
+        height: auto; }
+    .container .serv-main {
+      grid-column: section1 / section3; }
+      .container .serv-main .df-main {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column; }
+    .container .footer {
+      grid-area: footer;
+      display: flex;
+      flex-direction: column; } }
+
+/* HEADER */
+.header {
+  background: #0207f2;
+  background: linear-gradient(90deg, rgba(2, 7, 242, 0.468225) 0%, rgba(5, 35, 255, 0.994835) 100%);
+  padding: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .header img {
+    width: 250px;
+    height: 150px;
+    margin: 10px 20px;
+    border-radius: 10%; }
+  .header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end; }
+    .header nav ul li a {
+      color: #080202;
+      font-size: 1.8rem;
+      font-weight: 800;
+      padding: 0.7rem;
+      display: block; }
+      .header nav ul li a:hover {
+        color: #fff; }
+
+/* FOOTER */
+.df-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around; }
+
+.bg-footer {
+  background: #0207f2;
+  background: linear-gradient(90deg, rgba(2, 7, 242, 0.294555) 0%, rgba(5, 35, 255, 0.557861) 100%);
+  padding: 10px; }
+  .bg-footer .redes {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .bg-footer .redes a i {
+      font-size: 35px;
+      padding: 10px 10px;
+      margin: 10px; }
+      .bg-footer .redes a i:hover {
+        transform: scale(1.5);
+        transition: all 1s ease; }
+
+.index-main {
+  padding: 150px; }
+
+.bg-main {
+  background-image: url(https://www.ayanet.es/wp-content/uploads/2022/04/contabilidad-finanzas-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.main-card {
+  width: 370px;
+  display: flex;
+  flex-direction: column;
+  text-align: center; }
+
+.card {
+  width: 320px;
+  border-radius: 10px;
+  margin: 0px; }
+
+.us-df-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row; }
+  .us-df-main .us-card {
+    border-radius: 10px;
+    width: 50vw;
+    padding: 20px;
+    margin: 20px; }
+
+.df-us-img {
+  display: flex;
+  justify-content: space-evenly; }
+  .df-us-img .w-img2 {
+    padding: 20px;
+    width: 45vw;
+    border-radius: 50%; }
+
+.boton, .btn {
+  font-family: 'Lato', sans-serif;
+  color: #fff;
+  background-color: #24cf88;
+  border-radius: 5px;
+  border-color: transparent;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 10px 15px;
+  margin: 20px; }
+
+.df-main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  padding: 20px; }
+
+.ui {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+
+.ux {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+
+.pm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+
+.bg-card {
+  width: 320px;
+  background-color: #34559b;
+  padding: 9px 20px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+
+.serv-main .row {
+  margin: 20px;
+  display: flex;
+  justify-content: space-around; }
+
+.tipografia-card {
+  color: #fff;
+  font-family: 'Lato', sans-serif; }
+
+.w-img {
+  width: 320px;
+  height: 280px; }
+
+.w-img3 {
+  height: 250px; }
+
+.cont-main {
+  margin: auto;
+  padding: 20px; }
+
+.border-card {
+  background-color: #fff;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-left: solid #000 1px;
+  border-top: solid #000 1px;
+  border-right: solid #000 1px;
+  border-bottom: solid #000 1px; }
+
+.formTit {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.4rem;
+  padding: 1.2rem; }
+
+fieldset {
+  margin: 20px 60px 20px 60px;
+  padding: 20px; }
